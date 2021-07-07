@@ -39,7 +39,8 @@ void printLetters(string (&inputArray)[26][7])
             cout << inputArray[row][col];
         }
     }
-    cout << endl;
+            cout << endl;
+
 }
 
 void initializeLetterSet(char (&inputArray)[26])
@@ -121,6 +122,7 @@ int main()
     vector<char> userSet;
     loadFile(characters);
     initializeLetterSet(characterSet);
+    printLetters(characters);
     //TODO get user input
     string userInput;
     cout << "Please enter in your phrase" << endl;
