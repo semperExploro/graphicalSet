@@ -60,6 +60,7 @@ void initializeVector(vector<char> &userSet, string userInput)
 
 void getColor(char color)
 {
+    //TODO SET COLORS
     switch (color)
     {
     case 'b':
@@ -68,7 +69,6 @@ void getColor(char color)
     case 'g':
         Terminal::color_fg(false, Terminal::GREEN);
         break;
-
     case 'y':
         Terminal::color_fg(false, Terminal::YELLOW);
         break;
