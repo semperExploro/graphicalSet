@@ -12,35 +12,10 @@ void getColor()
 {
 
     //TODO, GET RANDOM NO
-    int color = rand() % 7;
-   // cout<<"color "<<color<<endl;
+
     //TODO SET COLORS
 
-    //TODO, GET COLORS
-    switch (color)
-    {
-    case 1:
-        Terminal::color_fg(false, Terminal::BLUE);
-        break;
-    case 2:
-        Terminal::color_fg(false, Terminal::GREEN);
-        break;
-    case 3:
-        Terminal::color_fg(false, Terminal::YELLOW);
-        break;
-    case 4:
-        Terminal::color_fg(false, Terminal::WHITE);
-        break;
-    case 5:
-        Terminal::color_fg(false, Terminal::MAGENTA);
-        break;
-    case 6:
-        Terminal::color_fg(false, Terminal::BROWN);
-        break;
-    default:
-        Terminal::color_fg(false, Terminal::DEFAULT_COLOR);
-        break;
-    }
+  
 }
 int main()
 {
