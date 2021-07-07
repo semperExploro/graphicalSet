@@ -22,7 +22,6 @@ void loadFile(string (&inputArray)[26][7])
         {
             string readLine = "";
             getline(myfile, readLine);
-            // cout << "readline value " << readLine << endl;
             readLine = readLine.substr(0, 10);
             inputArray[letterIndex][i] = readLine;
         }
@@ -87,6 +86,7 @@ void getColor(char color)
         break;
     }
 }
+
 void print(string (&characters)[26][7], vector<char> &userSet, vector<char> &colors)
 {
 
