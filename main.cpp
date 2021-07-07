@@ -20,8 +20,8 @@ void loadFile(string (&inputArray)[26][7])
         {
             string readLine = "";
             getline(myfile, readLine);
-            //   cout << "readline value " << readLine << endl;
-            readLine = readLine.substr(0,11);
+            // cout << "readline value " << readLine << endl;
+            readLine = readLine.substr(0, 10);
             inputArray[letterIndex][i] = readLine;
         }
     }
@@ -30,13 +30,15 @@ void loadFile(string (&inputArray)[26][7])
 
 void printLetters(string (&inputArray)[26][7])
 {
-    for (int row = 0; row < 26; row++)
+
+    for (int col = 0; col < 7; col++)
     {
-        for (int col = 0; col < 7; col++)
+        for (int row = 0; row < 26; row++)
         {
-            cout << inputArray[row][col] << endl;
+            cout << inputArray[row][col];
         }
     }
+    cout << endl;
 }
 
 void initializeLetterSet(char (&inputArray)[26])
@@ -55,22 +57,23 @@ void initializeVector(vector<char> &userSet, string userInput)
     }
 }
 
-void print(string (&characters)[26][7], vector<char> &userSet)
+void print(string (&characters)[26][7], vector<char> &userSet, vector<char> &colors)
 {
-    
-    cout<<"sizing "<<userSet.size()<<endl;
+
     for (int col = 0; col < 7; col++)
     {
         for (int i = 0; i < userSet.size(); i++)
         {
-            if(userSet[i]==32){
-                cout<<"\t";
+            if (userSet[i] == 32)
+            {
+                cout << "\t";
                 continue;
             }
             char workingChar = userSet[i] - 'a';
-            cout << characters[workingChar][col]<<"   ";
+
+            cout << characters[workingChar][col] << " ";
         }
-        cout<<"\n";
+        cout << "\n";
     }
 }
 
@@ -81,14 +84,38 @@ int main()
     vector<char> userSet;
     loadFile(characters);
     initializeLetterSet(characterSet);
-    //printLetters(characters);
     //TODO get user input
     string userInput;
     cout << "Please enter in your phrase" << endl;
     getline(cin, userInput);
+
+    //TODO count total colors
+    int count = 0;
+    for (int i = 0; i < userInput.length(); i++)
+    {
+        if(userInput[i]==32){
+            count++;
+        }
+    }
+
+    //TODO get users preferences of colors
+    cout << "What colors do you want" << endl;
+    cout << "\t B - blue" << endl;
+    cout << "\t G - green" << endl;
+    cout << "\t Y - yellow" << endl;
+    cout << "\t W - white" << endl;
+
+    vector<char> colors;
+    for(int i =0;i<colors.size();i++){
+        char input;
+        cout<<i<<" color"<<endl;
+        cin>>input;
+        colors.push_back(input);
+    }
+
     //end of userInput
     initializeVector(userSet, userInput);
-    print(characters, userSet);
-    cout<<"Program has finished"<<endl;
+    print(characters, userSet, colors);
+    cout << "Program has finished" << endl;
     return 0;
 }
