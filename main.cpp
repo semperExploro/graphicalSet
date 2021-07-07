@@ -61,31 +61,7 @@ void initializeVector(vector<char> &userSet, string userInput)
 
 void getColor(char color)
 {
-    //TODO SET COLORS
-    switch (color)
-    {
-    case 'b':
-        Terminal::color_fg(false, Terminal::BLUE);
-        break;
-    case 'g':
-        Terminal::color_fg(false, Terminal::GREEN);
-        break;
-    case 'y':
-        Terminal::color_fg(false, Terminal::YELLOW);
-        break;
-    case 'w':
-        Terminal::color_fg(false, Terminal::WHITE);
-        break;
-    case 'm':
-        Terminal::color_fg(false, Terminal::MAGENTA);
-        break;
-    case 'u':
-        Terminal::color_fg(false, Terminal::BROWN);
-        break;
-    default:
-        Terminal::color_fg(false, Terminal::DEFAULT_COLOR);
-        break;
-    }
+  
 }
 
 void print(string (&characters)[26][7], vector<char> &userSet, vector<char> &colors)
@@ -124,36 +100,14 @@ int main()
     initializeLetterSet(characterSet);
     printLetters(characters);
     //TODO get user input
-    string userInput;
-    cout << "Please enter in your phrase" << endl;
-    getline(cin, userInput);
+
 
     //TODO count total colors
-    int count = 0;
-    for (int i = 0; i < userInput.length(); i++)
-    {
-        if (userInput[i] == 32)
-        {
-            count++;
-        }
+
     }
 
     //TODO get users preferences of colors
-    cout << "What colors do you want" << endl;
-    cout << "\t b - blue" << endl;
-    cout << "\t g - green" << endl;
-    cout << "\t y - yellow" << endl;
-    cout << "\t w - white" << endl;
-    cout << "\t m - magenta" << endl;
-    cout << "\t u - brown" << endl;
-    vector<char> colors;
-    for (int i = 0; i < count + 1; i++)
-    {
-        char input;
-        cout << i << " color" << endl;
-        cin >> input;
-        colors.push_back(input);
-    }
+
 
     //end of userInput
     initializeVector(userSet, userInput);
