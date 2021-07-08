@@ -104,10 +104,10 @@ int main()
 
     //TODO count total colors
 
-    }
+    
 
     //TODO get users preferences of colors
-
+    
 
     //end of userInput
     initializeVector(userSet, userInput);
