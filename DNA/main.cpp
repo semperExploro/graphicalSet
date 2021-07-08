@@ -32,6 +32,8 @@ int main()
                 cout << " ";
                 sleep_for(std::chrono::milliseconds(1));
             }
+
+            //set the color of the console
             getColor();
 
             cout << "=";
@@ -42,6 +44,7 @@ int main()
 
                 cout << " ";
             }
+            //set the color of the console
             getColor();
 
             cout << "=";
@@ -58,6 +61,7 @@ int main()
                 remainingSpaces = k;
                 cout << " ";
             }
+            //set the color of the console
             getColor();
 
             cout << "=";
@@ -68,6 +72,7 @@ int main()
 
                 cout << " ";
             }
+             //set the color of the console
             getColor();
 
             cout << "=";
