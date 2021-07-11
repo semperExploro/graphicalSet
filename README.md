@@ -8,3 +8,6 @@ To set the color type and replace the color accordingly.
 
 Available colors (case sensitive)
 BLUE, GREEN, YELLOW, WHITE, MAGENTA, BROWN,
+
+## Notes
+This program was developed for a summer camp teaching C++. The program does not work unless the TODO code sections are filled in. 
